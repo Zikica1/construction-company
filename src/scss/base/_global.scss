@@ -8,18 +8,22 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  overflow-x: hidden;
+}
+
+p {
+  margin: 1em 0;
 }
 
 section {
-  padding: 0 6.4em;
+  padding: 0 1em;
 }
 
 ul {

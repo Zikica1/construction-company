@@ -6,11 +6,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2em 1.6em;
+  padding: 1.25em 1em; // 20px 16px
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: blue;
 }
 
 nav {
@@ -34,11 +33,15 @@ nav {
 nav a {
   display: block;
   text-align: center;
-  padding: 1.11em 0;
+  padding: 1.114em 0; //39px
   color: $secondary;
-  font-size: 3.5rem;
+  font-size: 2.1875rem; //35px
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+}
+
+nav a:hover {
+  opacity: 0.8;
 }
 
 /* hamburger */
@@ -48,8 +51,8 @@ nav a {
   z-index: 10;
   border: none;
   background: none;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.5rem; //24px
+  height: 1.5rem; // 24px
   cursor: pointer;
   transform: rotate(0);
   transition: all 0.5s ease;

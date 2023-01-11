@@ -1,0 +1,194 @@
+@use "../abstracts" as *;
+@use "../components/buttons" as *;
+
+/* Hero section */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: url(../img/hero-bg1.jpg) no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 7, 42, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  top: -40px;
+}
+
+.hero-content-inner {
+  opacity: 0;
+  transform: translateY(150px);
+  animation: moveUp 1.5s 2.5s ease-out forwards;
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.hero-content h2 {
+  position: relative;
+  padding-left: 2.56em; //64px
+  font-weight: 500;
+}
+
+.hero-content h2::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  height: 80%;
+  width: 5px;
+  background: $linear-gradient-hero;
+}
+
+.hero-content p {
+  position: relative;
+  width: 90%;
+  margin: 1em 0; // 14px 0px
+  font-size: 0.875rem; // 14px
+}
+
+.hero-img {
+  position: absolute;
+  z-index: 1;
+  width: 87%;
+  bottom: 20px;
+  right: -30px;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade-in 2.5s 2s ease-out forwards;
+
+  @include smSize {
+    width: 80%;
+    bottom: 0;
+  }
+}
+
+/* Info section */
+.info {
+  padding-top: 3.125em;
+  padding-bottom: 3.125em;
+}
+
+.info-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.info-img {
+  position: relative;
+  height: 22.125em;
+  width: 22.125em;
+  background: url(../img/info-img-1.jpg) no-repeat center center/cover;
+}
+
+.info-inner .info-img::after {
+  content: '';
+  position: absolute;
+  height: 19.375em;
+  width: 20.375em;
+  background: rgb(201, 199, 199) url(../img/info-img-2.jpg) no-repeat center center/cover;
+  background-blend-mode: hard-light;
+  top: 100px;
+  left: 120px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text h2 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 2.5em;
+  padding-left: 2.5em;
+}
+
+.info-text h2::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 7.5%;
+  background-color: $primary;
+  left: 0;
+  top: 50%;
+}
+
+.info-text h3 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  text-transform: capitalize;
+  margin: .5em 0 1em;
+  font-weight: 600;
+}
+
+.info-text>*:nth-child(2) {
+  position: relative;
+  padding-left: 4em;
+  width: 89%;
+}
+
+.info-text>*:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  height: 75%;
+  width: 5px;
+  background: $linear-gradient-light;
+  left: 30px;
+  top: 10px;
+}
+
+.info-text ul.stats {
+  align-self: center;
+}
+
+ul.stats li {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+ul.stats strong {
+  display: block;
+  color: $primary;
+  font-size: 3.125rem;
+}
+
+ul.stats span {
+  font-weight: 400;
+}
+
+.info-move-down {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+
+.info-move-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+
+.info-move-down.show-info,
+.info-move-right.show-info {
+  opacity: 1;
+  transform: translate(0);
+}

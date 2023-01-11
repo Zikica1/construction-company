@@ -1,0 +1,57 @@
+@use "../abstracts/colors" as *;
+
+.btn {
+  display: inline-block;
+  position: relative;
+  border: none;
+  border-radius: 100em;
+  color: #000;
+  background-color: $primary;
+  padding: 0.75em 2.1875em; //12px 35px
+  margin: 1em 0; //16px 0px
+  line-height: 100%;
+  font-weight: 500;
+  font-size: 0.875rem; // 14px
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-overlay {
+  position: absolute;
+  width: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0, 0);
+  transition: transform .45s ease;
+}
+
+.btn:hover .btn-overlay {
+  transform: translate(-50%, -50%) scale(1, 1);
+}
+
+.btn-overlay::before {
+  position: relative;
+  content: '';
+  display: block;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-color: rgb(1, 44, 109);
+  transition: transform .45s ease-out;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 1.8em;
+}
+
+.btn:hover .btn-text {
+  color: #fff;
+}
+
+.btn-primary {
+  transform: translateX(-80px);
+  opacity: 0;
+  animation: moveRight 1s 3.5s ease-out forwards;
+}

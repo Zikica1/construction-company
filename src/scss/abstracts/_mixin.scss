@@ -1,0 +1,7 @@
+$sm: 31.25rem;
+
+@mixin smSize {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
