@@ -11,19 +11,24 @@ hamburgerBtn.addEventListener('click', () => {
 //observer info section
 
 const infoItems = document.querySelectorAll('.info-item');
+const experienceItems = document.querySelectorAll('.experience-anim');
 
 const optionInfo = {
-  threshold: 0.5,
-  rootMargin: "0px 0px -100px 0px"
+  threshold: 0.25,
+  rootMargin: "0px 0px 0px 0px"
 }
 
-const observerInfo = new IntersectionObserver((entries, observerInfo) => {
+const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle('show-info', entry.isIntersecting)
-    if (entry.isIntersecting) observerInfo.unobserve(entry.target)
+    entry.target.classList.toggle('show', entry.isIntersecting)
+    if (entry.isIntersecting) observer.unobserve(entry.target)
   })
 }, optionInfo)
 
 infoItems.forEach((item) => {
-  observerInfo.observe(item)
+  observer.observe(item)
+})
+
+experienceItems.forEach((item) => {
+  observer.observe(item)
 })
