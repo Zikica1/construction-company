@@ -1,0 +1,142 @@
+@use "../abstracts/colors" as *;
+
+footer {
+  color: $on-container;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  padding: 5em 1em 0;
+}
+
+.footer-inner p {
+  width: 90%;
+}
+
+.footer-inner-icons {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.footer-inner-icons div {
+  width: 3em;
+  height: 3em;
+  border: none;
+  border-radius: 50%;
+  background-color: #d8d6d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-out;
+}
+
+.footer-inner-icons div:hover {
+  cursor: pointer;
+  background-color: $primary;
+}
+
+.footer-inner-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-inner-icons img {
+  width: 1em;
+  height: 1em;
+}
+
+.footer-inner h3 {
+  position: relative;
+  color: #000;
+  padding-left: 0.9375em;
+  margin-bottom: 2em;
+}
+
+.footer-inner h3::before {
+  content: '';
+  position: absolute;
+  height: 75%;
+  width: 5px;
+  background: $linear-gradient-light;
+  left: 0;
+  top: 2px;
+}
+
+.footer-inner-card-2 li,
+.footer-inner-card-3 li {
+  position: relative;
+  margin-bottom: 1em;
+  font-weight: 500;
+  padding-left: 0.9375em;
+}
+
+.footer-inner-card-2 li::before,
+.footer-inner-card-3 li::before {
+  content: '';
+  position: absolute;
+  width: 0.3125em;
+  height: 0.3125em;
+  background: $linear-gradient-light;
+  left: 0;
+  top: 10px;
+}
+
+.footer-inner form {
+  display: flex;
+  align-items: center;
+  background-color: #e7eaf6;
+  border: none;
+  outline: none;
+  border-radius: 100em;
+  height: 3.75em;
+  overflow: hidden;
+  margin: 2em 0 3.125em;
+}
+
+.footer-inner form label {
+  position: absolute;
+  left: -1000px;
+}
+
+.footer-inner input {
+  color: #333;
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px 15px 10px 25px;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+.footer-inner input::placeholder {
+  color: $text;
+  font-weight: 500;
+}
+
+.footer-inner button {
+  background-color: $primary;
+  height: 3.5em;
+  width: 3.5em;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.footer-copy {
+  height: 100px;
+  background: $secondary;
+  color: $text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+}

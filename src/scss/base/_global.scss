@@ -1,3 +1,5 @@
+@use "../abstracts/mixin" as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=Poppins:wght@400;500;800&display=swap');
 
 *,
@@ -8,14 +10,14 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 p {
@@ -24,6 +26,10 @@ p {
 
 section {
   padding: 0 1em;
+
+  @include mdSize {
+    padding: 0 4em;
+  }
 }
 
 ul {

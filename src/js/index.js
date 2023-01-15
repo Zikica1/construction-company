@@ -8,14 +8,15 @@ hamburgerBtn.addEventListener('click', () => {
   nav.classList.toggle('show-nav')
 })
 
-//observer info section
+//observer home
 
 const infoItems = document.querySelectorAll('.info-item');
 const experienceItems = document.querySelectorAll('.experience-anim');
+const teamCard = document.querySelectorAll('.team-card')
 
 const optionInfo = {
   threshold: 0.25,
-  rootMargin: "0px 0px 0px 0px"
+  rootMargin: "0px 0px -50px 0px"
 }
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -30,5 +31,9 @@ infoItems.forEach((item) => {
 })
 
 experienceItems.forEach((item) => {
+  observer.observe(item)
+})
+
+teamCard.forEach((item) => {
   observer.observe(item)
 })
