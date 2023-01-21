@@ -6,6 +6,14 @@
   @include mdSize {
     font-size: 3.125rem; // 50px
   }
+
+  @include lgSize {
+    font-size: 4.5rem; //72px
+  }
+
+  @include xlSize {
+    font-size: 5rem;
+  }
 }
 
 .font-xl {
@@ -14,19 +22,31 @@
   @include mdSize {
     font-size: 2.5rem; //40px
   }
+
+  @include lgSize {
+    font-size: 3.125rem; //0px
+  }
+
+  @include xlSize {
+    font-size: 3.75rem;
+  }
 }
 
 .font-lg {
   font-size: 1.875rem; //30px
 
   @include mdSize {
-    font-size: 2.8125rem //45px
+    font-size: 3.125rem //50px
   }
 
 }
 
 .font-md {
   font-size: 1.5626rem; //25px
+
+  @include lgSize {
+    font-size: 2.1875rem; // 35px
+  }
 }
 
 .font-sm {

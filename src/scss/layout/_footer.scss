@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixin" as *;
 
 footer {
   color: $on-container;
@@ -8,7 +9,18 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3em;
-  padding: 5em 1em 0;
+  padding: 5em 1em 3.125em;
+
+  @include mdSize {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  @include lgSize {
+    grid-template-columns: repeat(auto-fit, minmax(11.625rem, auto));
+    gap: 1em;
+  }
 }
 
 .footer-inner p {
@@ -17,10 +29,18 @@ footer {
 
 .footer-inner-icons {
   display: flex;
-  width: 50%;
+  width: 60%;
   justify-content: space-between;
   align-items: center;
   margin-top: 2em;
+
+  @include mdSize {
+    width: 65%;
+  }
+
+  @include lgSize {
+    width: 85%;
+  }
 }
 
 .footer-inner-icons div {
@@ -113,6 +133,11 @@ footer {
   padding: 10px 15px 10px 25px;
   font-size: 100%;
   font-family: inherit;
+
+  @include lgSize {
+    padding-right: 0;
+    width: 85%;
+  }
 }
 
 .footer-inner input::placeholder {
@@ -129,6 +154,11 @@ footer {
   border-radius: 50%;
   margin: 1em;
   cursor: pointer;
+
+  @include lgSize {
+    height: 3em;
+    width: 3em;
+  }
 }
 
 .footer-copy {

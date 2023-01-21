@@ -17,6 +17,27 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 4em;
+  }
+
+  @include lgSize {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-header {
+  position: relative;
+  height: 6.25em;
+  background: $secondary;
+
+  @include mdSize {
+    height: 9.375em;
+    padding: 0 4em;
+  }
+
+  @include lgSize {
+    height: 5em;
   }
 }
 

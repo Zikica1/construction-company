@@ -1,6 +1,13 @@
+@use "../abstracts/mixin" as *;
+
 /*PaddingY*/
 
 .p-y {
   padding-top: 3.125em;
   padding-bottom: 3.125em;
+
+  @include lgSize {
+    padding-top: 6.25em;
+    padding-bottom: 6.25em;
+  }
 }

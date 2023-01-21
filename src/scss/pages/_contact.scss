@@ -1,0 +1,243 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixin" as *;
+
+.contact {
+  @include lgSize {
+    padding-bottom: 12.5em;
+  }
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.125em;
+
+  @include lgSize {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.contact-col-right {
+  @include lgSize {
+    order: 2;
+  }
+}
+
+.contact-map {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.contact-map img.contact-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(125%) brightness(115%);
+}
+
+.contact-map img.contact-location {
+  position: absolute;
+  top: 43%;
+  left: 35%;
+  object-fit: cover;
+  width: 50px;
+  height: 100px;
+  filter: contrast(110%);
+}
+
+.contact-map .google-logo {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.contact-map .google-logo img {
+  filter: brightness(70%);
+}
+
+.contact-info {
+  margin-top: 3.125em;
+
+  @include mdSize {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-card {
+  position: relative;
+  display: flex;
+  padding: 0.937em 0.625em 0.625em;
+  align-items: flex-start;
+  height: 10.5em;
+
+  @include lgSize {
+    height: 15em;
+    padding: 0.8em;
+  }
+
+  @include xlSize {
+    height: 10.5em;
+  }
+}
+
+.contact-card:hover {
+  background-color: $secondary;
+}
+
+.contact-card h4 {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  padding-left: 0.75em;
+}
+
+.contact-card:hover h4 {
+  color: #fff;
+}
+
+.contact-card h4::before {
+  content: '';
+  position: absolute;
+  height: 29px;
+  width: 5px;
+  background: $linear-gradient-light;
+  left: 0;
+}
+
+.contact-card p {
+  font-size: 0.875rem;
+}
+
+.contact-card:hover p {
+  color: #fff;
+}
+
+.contact-card .card-img {
+  position: absolute;
+  bottom: -55px;
+  right: -30px;
+
+  @include lgSize {
+    bottom: -45px;
+    right: -25px;
+  }
+}
+
+.contact-content {
+  margin-bottom: 2.5em;
+}
+
+.contact-content h2 {
+  position: relative;
+  font-size: 1rem;
+  padding-left: 2.5em;
+  color: $on-container;
+  font-weight: 500;
+
+  @include mdSize {
+    font-size: 1.25rem;
+    margin-bottom: 1.25em;
+  }
+}
+
+.contact-content h2::before {
+  content: '';
+  position: absolute;
+  width: 2.1875em;
+  height: 0.1875em;
+  background: $linear-gradient-light;
+  left: 0;
+  top: 48%;
+}
+
+.contact-content span {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+
+  @include lgSize {
+    line-height: 1.2;
+  }
+}
+
+.contact-content p {
+  @include lgSize {
+    font-size: 1rem;
+  }
+}
+
+.contact form div {
+  margin-bottom: 3em;
+}
+
+.contact form label {
+  position: absolute;
+  left: -1000px;
+}
+
+.contact form input,
+.contact form textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bbb;
+  width: 100%;
+  padding: 0.625em 0;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #000;
+}
+
+.contact input[type="submit"] {
+  width: unset;
+  border: none;
+  padding: 16px 45px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  transition: all .2s ease-in;
+  text-align: center;
+
+  &:hover {
+    background: $secondary;
+    color: #fff;
+  }
+}
+
+//contact animation
+.map-fade-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s 0.5s ease-out;
+}
+
+.contact-map.show-map {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-right {
+  opacity: 0;
+  transform: translateX(150px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+
+.contact-move-down {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+
+.contact-card.show-card,
+.contact-content.show-card,
+.contact-form.show-card {
+  opacity: 1;
+  transform: translate(0);
+}

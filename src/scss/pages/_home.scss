@@ -27,6 +27,7 @@
 .hero-content {
   position: relative;
   z-index: 2;
+  top: -30px;
 
   @include mdSize {
     top: 70px;
@@ -46,16 +47,17 @@
 
 .hero-content h2 {
   position: relative;
-  padding-left: 2.56em; //64px
+  padding-left: 64px;
   font-weight: 500;
 }
 
 .hero-content h2::before {
   content: '';
   position: absolute;
-  left: 50px;
-  height: 80%;
+  left: 45px;
+  height: 70%;
   width: 5px;
+  top: 5px;
   background: $linear-gradient-hero;
 }
 
@@ -87,13 +89,29 @@
     width: 65%;
     right: -30px;
   }
+
+  @include lgSize {
+    width: 55%;
+    right: 50px;
+  }
+
+  @include xlSize {
+    width: 50%;
+  }
 }
+
 
 /* Info section */
 .info-inner {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
+  @include lgSize {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 1.5rem;
+  }
 }
 
 .info-img {
@@ -105,6 +123,12 @@
   @include mdSize {
     width: 31.25em;
     height: 31.25em;
+  }
+
+  @include lgSize {
+    width: 26.25em;
+    height: 26.25em;
+    ;
   }
 }
 
@@ -122,13 +146,25 @@
     width: 28.875em;
     height: 27.625em;
     top: 150px;
-    left: 180px;
+    left: 300px;
   }
+
+  @include lgSize {
+    left: 90px;
+    top: 220px;
+    width: 26.25em;
+    height: 26.25em;
+  }
+
 }
 
 .info-text {
   display: flex;
   flex-direction: column;
+
+  @include lgSize {
+    flex: 1;
+  }
 }
 
 .info-text h2 {
@@ -140,6 +176,8 @@
 
   @include mdSize {
     font-size: 1.1875rem;
+    margin-top: 3.75em;
+    padding-left: 4em;
   }
 }
 
@@ -151,6 +189,12 @@
   background-color: $primary;
   left: 0;
   top: 50%;
+
+  @include mdSize {
+    width: 60px;
+    height: 5px;
+    top: 35%;
+  }
 }
 
 .info-text span {
@@ -166,6 +210,7 @@
   position: relative;
   padding-left: 4em;
   width: 89%;
+
 }
 
 .info-text>*:nth-child(2)::before {
@@ -188,6 +233,12 @@
     margin-top: 2em;
     padding-left: 3.5em;
     padding-right: 2.5em;
+
+
+    @include lgSize {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -247,6 +298,19 @@ ul.stats span {
   font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
   font-weight: 600;
+
+  @include mdSize {
+    line-height: 1.2;
+  }
+}
+
+.experience-inner {
+  @include mdSize {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: start;
+    gap: 1em;
+  }
 }
 
 .experience-card {
@@ -257,6 +321,16 @@ ul.stats span {
   margin: 2em auto;
   width: 85%;
   transition: all .3s ease-out;
+
+  @include mdSize {
+    width: 100%;
+  }
+
+  @include lgSize {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+  }
 }
 
 .experience-card:hover {
@@ -272,7 +346,12 @@ ul.stats span {
   height: 8.875em;
   background-color: $on-container;
   padding: 2.187em 0.312em;
-  margin: auto;
+  margin: 2em auto;
+
+  @include lgSize {
+    width: 9em;
+    height: 8.875em;
+  }
 }
 
 .experience-card:hover .img-card {
@@ -286,6 +365,7 @@ ul.stats span {
   filter: brightness(40%)
 }
 
+
 .text-card h4 {
   color: #fff;
   font-size: 1.563rem;
@@ -294,6 +374,12 @@ ul.stats span {
 
 .experience-card:hover .text-card h4 {
   color: #000;
+}
+
+.text-card p {
+  @include lgSize {
+    font-size: 0.9375rem;
+  }
 }
 
 /* experience-animation */
@@ -317,6 +403,11 @@ ul.stats span {
 }
 
 /* Team members */
+.team-member {
+  @include lgSize {
+    margin-bottom: 12.5em;
+  }
+}
 
 .team-text {
   text-align: center;
@@ -333,7 +424,7 @@ ul.stats span {
 .team-text h2::before {
   content: '';
   position: absolute;
-  width: 12%;
+  width: 54px;
   height: 5px;
   background: $linear-gradient-light;
   margin-left: 0.9375em;
@@ -351,6 +442,14 @@ ul.stats span {
   align-items: center;
   justify-content: center;
   gap: 2em;
+
+  @include mdSize {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include lgSize {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .team-card {
@@ -367,6 +466,10 @@ ul.stats span {
   @include smSize {
     padding-left: 25%;
   }
+
+  @include mdSize {
+    padding-left: 0;
+  }
 }
 
 .team-card img {
@@ -375,6 +478,10 @@ ul.stats span {
 
   @include smSize {
     width: 23.125em;
+  }
+
+  @include mdSize {
+    width: 100%;
   }
 }
 
@@ -429,7 +536,10 @@ ul.stats span {
 .next-project {
   position: relative;
   background: url(../img/skay.jpg) no-repeat center center/cover;
-  // height: 300px;
+
+  @include lgSize {
+    height: 300px;
+  }
 }
 
 .next-project::before {
@@ -446,6 +556,10 @@ ul.stats span {
 .next-project-inner {
   display: flex;
   align-items: center;
+
+  @include lgSize {
+    height: 100%;
+  }
 }
 
 .next-project-content {
@@ -463,6 +577,11 @@ ul.stats span {
   @include smSize {
     width: 85%;
   }
+
+  @include lgSize {
+    width: 95%;
+    margin-bottom: 0.457em;
+  }
 }
 
 .next-project-img {
@@ -471,4 +590,12 @@ ul.stats span {
   object-fit: cover;
   bottom: 0;
   right: 0;
+
+  @include smSize {
+    width: 75%;
+  }
+
+  @include lgSize {
+    width: 70%;
+  }
 }
