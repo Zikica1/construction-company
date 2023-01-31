@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" src="js/contact.js"></script>
+    <script type="module" src="js/projects.js"></script>
   </head>
   <body>
     <div class="scrollToTop-btn">
@@ -48,160 +48,1227 @@
     <!--Projects section-->
     <section class="projects p-y">
       <div class="header">
-        <div class="header-text">
+        <div class="header-text projectItems header-fade-in">
           <span>portfolio</span>
-          <p class="font-lg">Case Solution</p>
+          <p>Case Solution</p>
         </div>
 
         <ul>
-          <li><a href="#">All</a></li>
-          <li><a href="#">Construction</a></li>
-          <li><a href="#">Garden</a></li>
-          <li><a href="#">House</a></li>
-          <li><a href="#">School</a></li>
+          <li class="active link">All</li>
+          <li class="link">Construction</li>
+          <li class="link">Garden</li>
+          <li class="link">House</li>
+          <li class="link">School</li>
         </ul>
       </div>
 
       <div class="project-inner">
-        <div id="project-inner-1-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0001.jpg 300w,
-              img/project-img-500w__0001.jpg 500w,
-              img/project-img-800w__0001.jpg 800w
-            "
-            sizes="(max-width: 700px) 500px"
-            src="img/project-img-800w__0001.jpg"
-            alt=""
-          />
+        <div
+          class="project project-inner-all projectAll-fadeIn projectItems active"
+        >
+          <div class="grid-2-col project-wrap">
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-1000w_0001.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0001.jpg   300w,
+                  img/projectImg/project-img-768w_0001.jpg   768w,
+                  img/projectImg/project-img-1000w_0001.jpg 1000w
+                "
+                sizes="(max-width: 479px) 300px,
+          (max-width: 768px) 768px,
+          (max-width: 1024px) 1000px, 768px"
+              />
 
-          <div class="project-inner-content">
-            <h3>Principle of Product Design</h3>
-            <span href="#"> Construction </span>
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Principle of Product Design</h3>
+                  <span href="#"> Construction </span>
+                </div>
+              </div>
+
+              <div class="overlay"></div>
+            </div>
+
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0002.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0002.jpg   300w,
+                  img/projectImg/project-img-500w_0002.jpg   500w,
+                  img/projectImg/project-img-768w_0002.jpg   768w,
+                  img/projectImg/project-img-1024w_0002.jpg 1024w
+                "
+                sizes="
+              (max-width: 479px) 300px,
+            (max-width: 768px) 500px,
+            (max-width: 1024px) 1024px, 768px"
+              />
+
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0003.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0003.jpg 300w,
+                  img/projectImg/project-img-500w_0003.jpg 500w,
+                  img/projectImg/project-img-768w_0003.jpg 768w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px)768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>School</h3>
+                  <span>School</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0004.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0004.jpg   300w,
+                  img/projectImg/project-img-500w_0004.jpg   500w,
+                  img/projectImg/project-img-768w_0004.jpg   768w,
+                  img/projectImg/project-img-1024w_0004.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Office Building</h3>
+                  <span>House</span>
+                </div>
+              </div>
+
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0005.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0005.jpg   300w,
+                  img/projectImg/project-img-500w_0005.jpg   500w,
+                  img/projectImg/project-img-768w_0005.jpg   768w,
+                  img/projectImg/project-img-1024w_0005.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-2000w_0006.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0006.jpg   300w,
+                  img/projectImg/project-img-768w_0006.jpg   768w,
+                  img/projectImg/project-img-1024w_0006.jpg 1024w
+                "
+                sizes="
+        (max-width: 479px) 300px,
+        (max-width: 768px) 768px,
+        (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Construction</h3>
+                  <span>Construction</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0007.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0007.jpg   300w,
+                  img/projectImg/project-img-500w_0007.jpg   500w,
+                  img/projectImg/project-img-768w_0007.jpg   768w,
+                  img/projectImg/project-img-1024w_0007.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>School</h3>
+                  <span>School</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0005.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0005.jpg   300w,
+                  img/projectImg/project-img-500w_0005.jpg   500w,
+                  img/projectImg/project-img-768w_0005.jpg   768w,
+                  img/projectImg/project-img-1024w_0005.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>House</h3>
+                  <span>House</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-1000w_0008.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0008.jpg   300w,
+                  img/projectImg/project-img-1000w_0008.jpg 1000w,
+                  img/projectImg/project-img-768w_0008.jpg   768w,
+                  img/projectImg/project-img-1024w_0008.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 768px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0009.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0009.jpg   300w,
+                  img/projectImg/project-img-500w_0009.jpg   500w,
+                  img/projectImg/project-img-768w_0009.jpg   768w,
+                  img/projectImg/project-img-1024w_0009.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0010.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0010.jpg   300w,
+                  img/projectImg/project-img-500w_0010.jpg   500w,
+                  img/projectImg/project-img-768w_0010.jpg   768w,
+                  img/projectImg/project-img-1024w_0010.jpg 1024w
+                "
+                sizes="
+        (max-width: 479px) 300px,
+        (max-width: 768px) 500px,
+        (max-width: 1024px) 1024px, 768px "
+              />
+
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>House</h3>
+                  <span>House</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
           </div>
         </div>
 
-        <div id="project-inner-2-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0002.jpg 150w,
-              img/project-img-500w__0002.jpg 500w,
-              img/project-img-768w__0002.jpg 768w
-            "
-            sizes="(max-width: 700px) 300px"
-            src="img/project-img-768w__0002.jpg"
-            alt=""
-          />
+        <div class="project project-inner-construction">
+          <div class="grid-2-col project-wrap">
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-1000w_0001.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0001.jpg   300w,
+                  img/projectImg/project-img-768w_0001.jpg   768w,
+                  img/projectImg/project-img-1000w_0001.jpg 1000w
+                "
+                sizes="(max-width: 479px) 300px,
+            (max-width: 768px) 768px,
+            (max-width: 1024px) 1000px, 768px"
+              />
 
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Principle of Product Design</h3>
+                  <span href="#"> Construction </span>
+                </div>
+              </div>
+
+              <div class="overlay"></div>
+            </div>
+
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-2000w_0006.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0006.jpg   300w,
+                  img/projectImg/project-img-768w_0006.jpg   768w,
+                  img/projectImg/project-img-1024w_0006.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 768px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Construction</h3>
+                  <span>Construction</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
           </div>
         </div>
-        <div id="project-inner-3-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0003.jpg 300w,
-              img/project-img-500w__0003.jpg 500w,
-              img/project-img-768w__0003.jpg 768w
-            "
-            sizes="(max-width: 700px) 300px"
-            src="img/project-img-768w__0002.jpg"
-            alt=""
-          />
 
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
+        <div class="project project-inner-garden">
+          <div class="grid-2-col project-wrap">
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0002.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0002.jpg   300w,
+                  img/projectImg/project-img-500w_0002.jpg   500w,
+                  img/projectImg/project-img-768w_0002.jpg   768w,
+                  img/projectImg/project-img-1024w_0002.jpg 1024w
+                "
+                sizes="
+              (max-width: 479px) 300px,
+            (max-width: 768px) 500px,
+            (max-width: 1024px) 1024px, 768px"
+              />
+
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0005.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0005.jpg   300w,
+                  img/projectImg/project-img-500w_0005.jpg   500w,
+                  img/projectImg/project-img-768w_0005.jpg   768w,
+                  img/projectImg/project-img-1024w_0005.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-1000w_0008.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0008.jpg   300w,
+                  img/projectImg/project-img-1000w_0008.jpg 1000w,
+                  img/projectImg/project-img-768w_0008.jpg   768w,
+                  img/projectImg/project-img-1024w_0008.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 768px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
           </div>
         </div>
-        <div id="project-inner-4-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0004.jpg 300w,
-              img/project-img-768w__0004.jpg 768w
-            "
-            sizes="(max-width: 700px) 300px"
-            src="img/project-img-768w__0004.jpg"
-            alt=""
-          />
 
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
+        <div class="project project-inner-house">
+          <div class="grid-2-col project-wrap">
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0004.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0004.jpg   300w,
+                  img/projectImg/project-img-500w_0004.jpg   500w,
+                  img/projectImg/project-img-768w_0004.jpg   768w,
+                  img/projectImg/project-img-1024w_0004.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Office Building</h3>
+                  <span>House</span>
+                </div>
+              </div>
+
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0005.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0005.jpg   300w,
+                  img/projectImg/project-img-500w_0005.jpg   500w,
+                  img/projectImg/project-img-768w_0005.jpg   768w,
+                  img/projectImg/project-img-1024w_0005.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>Garden</h3>
+                  <span>Garden</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0010.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0010.jpg   300w,
+                  img/projectImg/project-img-500w_0010.jpg   500w,
+                  img/projectImg/project-img-768w_0010.jpg   768w,
+                  img/projectImg/project-img-1024w_0010.jpg 1024w
+                "
+                sizes="
+        (max-width: 479px) 300px,
+        (max-width: 768px) 500px,
+        (max-width: 1024px) 1024px, 768px "
+              />
+
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="project-inner-text">
+                  <h3>House</h3>
+                  <span>House</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
           </div>
         </div>
-        <div id="project-inner-5-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0005.jpg 300w,
-              img/project-img-500w__0005.jpg 500w,
-              img/project-img-800w__0005.jpg 800w
-            "
-            sizes="(max-width: 700px) 300px"
-            src="img/project-img-800w__0005.jpg"
-            alt=""
-          />
 
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
-          </div>
-        </div>
-        <div id="project-inner-6-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-500w__0006.jpg 500w,
-              img/project-img-800w__0006.jpg 800w
-            "
-            sizes="(max-width: 700px) 500px"
-            src="img/project-img-800w__0006.jpg"
-            alt=""
-          />
+        <div class="project project-inner-school">
+          <div class="grid-2-col project-wrap">
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0003.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0003.jpg 300w,
+                  img/projectImg/project-img-500w_0003.jpg 500w,
+                  img/projectImg/project-img-768w_0003.jpg 768w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px)768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
 
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
-          </div>
-        </div>
-        <div id="project-inner-7-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0007.jpg 300w,
-              img/project-img-500w__0007.jpg 500w,
-              img/project-img-800w__0007.jpg 800w
-            "
-            sizes="(max-width: 700px) 300px"
-            src="img/project-img-800w__0007.jpg"
-            alt=""
-          />
+                <div class="project-inner-text">
+                  <h3>School</h3>
+                  <span>School</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-construction">
+              <img
+                src="img/projectImg/project-img-500w_0007.jpg"
+                alt=""
+                srcset="
+                  img/projectImg/project-img-300w_0007.jpg   300w,
+                  img/projectImg/project-img-500w_0007.jpg   500w,
+                  img/projectImg/project-img-768w_0007.jpg   768w,
+                  img/projectImg/project-img-1024w_0007.jpg 1024w
+                "
+                sizes="
+          (max-width: 479px) 300px,
+          (max-width: 768px) 500px,
+          (max-width: 1024px) 1024px, 768px "
+              />
+              <div class="project-inner-content">
+                <div class="project-inner-button">
+                  <button class="project-btn">
+                    <span class="project-btn-overlay"></span>
+                    <span class="project-btn-icon">
+                      <svg
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_506_489)">
+                          <path
+                            d="M22.7239 23L26.5159 26.792L25.8841 27.4241L22.7239 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M26.8269 23L30.6189 26.792L29.9871 27.4241L26.8269 30.584"
+                            stroke="#85A1B9"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_506_489">
+                            <rect width="54" height="54" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
 
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
-          </div>
-        </div>
-        <div id="project-inner-8-const" class="project-construction">
-          <img
-            srcset="
-              img/project-img-300w__0005.jpg 300w,
-              img/project-img-500w__0005.jpg 500w,
-              img/project-img-800w__0005.jpg 800w
-            "
-            sizes="(max-width: 700px) 300px"
-            src="img/project-img-800w__0005.jpg"
-            alt=""
-          />
-
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
-          </div>
-        </div>
-        <div id="project-inner-9-const" class="project-construction">
-          <div class="project-inner-content">
-            <h3>Garden</h3>
-            <span>Garden</span>
+                <div class="project-inner-text">
+                  <h3>School</h3>
+                  <span>School</span>
+                </div>
+              </div>
+              <div class="overlay"></div>
+            </div>
           </div>
         </div>
       </div>

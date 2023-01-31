@@ -28,16 +28,16 @@ header {
 
 .header-position {
   position: relative;
-  height: 6.25em;
+  min-height: 6.5em;
   background: $secondary;
 
   @include mdSize {
-    height: 9.375em;
+    min-height: 9.375em;
     padding: 0 4em;
   }
 
   @include lgSize {
-    height: 5em;
+    min-height: 5em;
   }
 }
 

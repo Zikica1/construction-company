@@ -1,0 +1,197 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/animation" as *;
+
+.projects .header {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.projects .header span {
+  position: relative;
+  padding-left: 60px;
+  font-weight: 500;
+  color: #333
+}
+
+.projects .header span::before {
+  content: '';
+  position: absolute;
+  width: 44px;
+  height: 5px;
+  background: $linear-gradient-light;
+  left: 0;
+  top: 50%;
+}
+
+.projects .header p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.375rem;
+}
+
+.projects .header ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.projects .header li {
+  color: $on-container;
+  margin-right: 1em;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.projects .header li:hover {
+  color: #fbb034;
+}
+
+.projects .header .link.active {
+  color: #fbb034;
+}
+
+.project-inner-all,
+.project-inner-construction,
+.project-inner-garden,
+.project-inner-house,
+.project-inner-school {
+  display: none;
+  transition: all 1s ease;
+}
+
+.project-inner-all.active,
+.project-inner-construction.active,
+.project-inner-garden.active,
+.project-inner-house.active,
+.project-inner-school.active {
+  display: block;
+}
+
+// .grid-2-col {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   align-items: start;
+//   justify-content: center;
+// }
+
+.project-inner-all .project-wrap>*:nth-child(1) {
+  grid-column: 1 / span 2;
+}
+
+.project-inner-all .project-wrap>*:nth-child(6) {
+  grid-column: 1 /span 2;
+}
+
+.project-inner-all .project-wrap>*:nth-child(9) {
+  grid-column: 1 / span 2;
+}
+
+.project-inner-all img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-construction {
+  position: relative;
+}
+
+.project-construction .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 34, 64, 0.75);
+  ;
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+
+.project-construction:hover .overlay {
+  opacity: 1;
+}
+
+.project-construction>*:not(img) {
+  position: absolute;
+}
+
+.project-construction img {
+  display: block;
+}
+
+.project-inner-content {
+  position: absolute;
+  z-index: 20;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.project-inner-button {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.project-construction:hover .project-inner-button {
+  animation: butMove 0.5s 0.25s ease-out forwards;
+}
+
+.project-inner-text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.project-construction:hover .project-inner-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-inner-content h3 {
+  color: #fff;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.project-inner-content span {
+  color: $text;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.project-inner-construction .project-wrap>*:first-child {
+  grid-column: 1 / span 2;
+}
+
+.project-inner-construction .project-wrap>*:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+.project-inner-garden .project-wrap>*:nth-child(3) {
+  grid-column: 1 / span 2;
+}
+
+/* animation */
+
+.header-fade-in {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 1s 0.5s ease-out;
+}
+
+.projectAll-fadeIn {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+
+.header-text.reset,
+.project-inner-all.reset {
+  opacity: 1;
+  transform: translateX(0);
+}

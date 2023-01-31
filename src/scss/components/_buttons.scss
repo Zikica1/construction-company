@@ -126,3 +126,53 @@
   pointer-events: all;
   opacity: 1;
 }
+
+/* Project-btn */
+.project-btn {
+  display: inline-block;
+  position: relative;
+  background-color: $primary;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.project-btn-overlay {
+  position: absolute;
+  width: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0, 0);
+  transition: transform .3s ease-out;
+}
+
+.project-btn:hover .project-btn-overlay {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-btn-overlay::before {
+  content: '';
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  padding-top: 100%;
+  background-color: #fff;
+  transition: transform .3s ease-out;
+}
+
+.project-btn-icon {
+  position: relative;
+  z-index: 20;
+  display: inline-block;
+}
+
+.project-btn:hover .project-btn-icon svg {
+  fill: $on-container;
+
+  path {
+    stroke: $on-container;
+  }
+}

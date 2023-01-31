@@ -18,3 +18,10 @@
     opacity: 1;
   }
 }
+
+@keyframes butMove {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
