@@ -41,3 +41,30 @@ links.forEach((link, i) => {
     }
   })
 })
+
+//Modal section
+
+const projectBtn = document.querySelectorAll('.project-btn')
+const modalSection = document.querySelectorAll('.modal-section')
+const modalCloseBtn = document.querySelectorAll('.modal-body-close')
+const projects = document.querySelector('.projects');
+
+const modal = function (i) {
+  modalSection[i].classList.add('modalAction')
+  projects.style.display = 'none'
+}
+
+projectBtn.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    modal(i)
+  })
+})
+
+modalCloseBtn.forEach((modalCloseBtn) => {
+  modalCloseBtn.addEventListener('click', () => {
+    modalSection.forEach((modalSection) => {
+      modalSection.classList.remove('modalAction')
+      projects.style.display = 'block'
+    })
+  })
+})

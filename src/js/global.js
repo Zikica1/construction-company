@@ -10,6 +10,7 @@ export function render() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   })
+
   //hamburger menu
 
   const hamburgerBtn = document.querySelector('.hamburger');
@@ -20,4 +21,3 @@ export function render() {
     nav.classList.toggle('show-nav')
   })
 }
-
