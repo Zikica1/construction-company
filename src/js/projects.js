@@ -47,7 +47,7 @@ links.forEach((link, i) => {
 const projectBtn = document.querySelectorAll('.project-btn')
 const modalSection = document.querySelectorAll('.modal-section')
 const modalCloseBtn = document.querySelectorAll('.modal-body-close')
-const projects = document.querySelector('.projects');
+const projects = document.querySelector('.projects')
 
 const modal = function (i) {
   modalSection[i].classList.add('modalAction')
@@ -55,7 +55,7 @@ const modal = function (i) {
 }
 
 projectBtn.forEach((btn, i) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
     modal(i)
   })
 })

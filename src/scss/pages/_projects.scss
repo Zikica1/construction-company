@@ -343,8 +343,13 @@
   margin-bottom: 1.5em;
 }
 
+.likes svg {
+  cursor: pointer;
+}
+
 .share svg {
   fill: #000;
+  cursor: pointer;
 }
 
 .share path {
