@@ -301,6 +301,22 @@
   }
 }
 
+.modal-body-grid {
+  @include lgSize {
+    display: grid;
+    grid-template-columns: 45% auto;
+    align-items: start;
+    justify-content: center;
+    gap: 4em;
+  }
+}
+
+.modal-content.sticky {
+  @include lgSize {
+    padding-top: 20%;
+  }
+}
+
 .modal-body-wrap-close {
   position: absolute;
   width: 20px;
@@ -325,11 +341,31 @@
   font-family: 'Poppins', sans-serif;
   margin: 0.9em 0 0.4em;
   line-height: 1.2;
+
+  @include lgSize {
+    position: relative;
+  }
+}
+
+.modal-content h1::before {
+  @include lgSize {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 74px;
+    background: $linear-gradient-light;
+    left: -100px;
+    top: 25px;
+  }
 }
 
 .modal-content p {
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 1.25em;
+  margin-bottom: 1.875em;
+
+  @include lgSize {
+    margin: 2.5em 0 1.875em;
+  }
 }
 
 .share-wrap {

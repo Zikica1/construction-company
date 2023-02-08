@@ -68,3 +68,14 @@ modalCloseBtn.forEach((modalCloseBtn) => {
     })
   })
 })
+
+// sticky
+
+window.addEventListener('scroll', () => {
+  let modalContent = document.querySelectorAll('.modal-content')
+
+  modalContent.forEach((modalContent) => {
+    modalContent.classList.toggle('sticky', window.scrollY > 200)
+  })
+
+})

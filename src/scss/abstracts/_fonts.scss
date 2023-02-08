@@ -60,3 +60,55 @@
     font-size: 1.25rem; // 20px
   }
 }
+
+.about-fs-lg {
+  font-size: 1.875rem;
+
+  @include mdSize {
+    font-size: 2.8125rem;
+  }
+
+  @include lgSize {
+    font-size: 3.125rem;
+  }
+}
+
+.about-fs-lg-2 {
+  font-size: 1.875rem;
+
+  @include mdSize {
+    font-size: 2.8125rem;
+  }
+
+  @include lgSize {
+    font-size: 2.5rem;
+  }
+}
+
+.about-fs-md {
+  font-size: 1rem;
+
+  @include mdSize {
+    font-size: 1.1875rem;
+  }
+
+  @include lgSize {
+    font-size: 1rem;
+  }
+}
+
+.about-fs-sm {
+  font-size: 0.875rem;
+
+  @include mdSize {
+    font-size: 1.25rem;
+  }
+
+  @include lgSize {
+    font-size: 0.9375rem;
+  }
+}
+
+.about-fs-sm-2 {
+  font-size: 0.9375rem;
+}
