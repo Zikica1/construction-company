@@ -6,21 +6,63 @@
   padding-left: 2.1875em;
   padding-right: 2.1875em;
   margin: 0 auto;
+  text-align: center;
+
+  @include lgSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    justify-content: center;
+    column-gap: 1em;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.about-inner-img {
+  @include mdSize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  @include lgSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    order: 2;
+  }
 }
 
 .about-inner-img img {
-  width: 100%;
   transition: all 2s ease;
+  margin-bottom: 1em;
 }
+
 
 .about-inner-content {
   text-align: center;
   margin-top: 3em;
+
+  @include mdSize {
+    text-align: left;
+  }
+
+  @include lgSize {
+    margin-top: 0;
+  }
 }
 
 .about-inner-content h6 {
   font-weight: normal;
   margin-top: 6.25em;
+
+  @include lgSize {
+    margin-top: 0;
+  }
 }
 
 .about-inner-content span {
@@ -34,11 +76,38 @@
   font-weight: 500;
 }
 
+.about-inner-content-text:nth-child(2) p {
+  @include mdSize {
+    position: relative;
+    padding-left: 5em;
+  }
+}
+
+.about-inner-content-text:nth-child(2) P::before {
+
+  @include mdSize {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 90%;
+    background-color: orange;
+    left: 2.333em;
+  }
+
+}
+
 .about-inner-content ul {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @include mdSize {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1em;
+    justify-content: start;
+  }
 }
 
 .about-inner-content li {
@@ -70,15 +139,74 @@
 .about-idea {
   position: relative;
   background-color: $container;
-  background: $container url(../img/circle.png) no-repeat 200% 70%/80%;
+  overflow: hidden;
+  padding-top: 1.875em;
+  padding-bottom: 1.875em;
+}
+
+.about-idea-img-1,
+.about-idea-img-2 {
+  display: inline-block;
+  position: absolute;
+}
+
+.about-idea-img-1 {
+  width: 60%;
+  height: 65%;
+  background: url(../img/about/about-circle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 150%;
+  bottom: 0;
+  left: -50px;
+
+
+  @include aboutMd {
+    bottom: -100px;
+    height: 75%;
+  }
+
+  @include mdSize {
+    left: -120px;
+    height: 85%;
+  }
+}
+
+.about-idea-img-2 {
+  width: 50%;
+  height: 70%;
+  right: -50px;
+  bottom: 15%;
+  background-image: url(../img/about/about-circle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -10%;
+
+  @include aboutMd {
+    height: 80%;
+  }
+
+  @include mdSize {
+    top: -140px;
+    height: 95%;
+    width: 60%;
+    right: -100px;
+  }
+
+  @include lgSize {
+    height: 100%;
+    width: 45%;
+  }
 }
 
 .about-idea-inner {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
   color: #fff;
   padding: 0 35px 25px;
+  max-width: 40.625em;
+  margin: 0 auto;
 }
 
 .about-idea-inner span {
@@ -117,19 +245,63 @@
   padding-bottom: 130px;
 }
 
+.about-clients-inner {
+  @include lgSize {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.about-clients-inner-content {
+  @include lgSize {
+    text-align: left;
+  }
+}
+
+.about-clients h6 {
+  font-weight: 500;
+}
+
+.about-clients span {
+  font-weight: 600;
+}
+
 .about-clients p {
   margin: 1em 0 2.5em;
   font-size: 0.875rem;
+
+  @include lgSize {
+    font-size: 1rem;
+  }
 }
 
 .about-clients-inner-widget {
-  margin: 100px 0;
+  margin: 6.25em 0;
+
+  @include mdSize {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include lgSize {
+    margin: 0;
+  }
 }
 
 .about-clients-inner-widget .widget-img {
   padding: 25px 45px;
   width: 70%;
   margin: 2em auto;
+
+  @include mdSize {
+    width: 100%;
+  }
+
+  @include lgSize {
+    margin: 0 auto;
+  }
 }
 
 .about-clients-inner-widget .widget-img:hover {
@@ -157,4 +329,32 @@
 .about-inner-content-text.about-fadeIn-show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.about-client-move {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.about-clients-inner-content {
+  transition: all 1.5s ease-out;
+}
+
+.about-clients-inner-content.about-client-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-widget-fadeIn {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.widget-img {
+  transition: all 1.2s ease-out;
+}
+
+.widget-img.about-widget-show {
+  opacity: 1;
+  transform: scale(1);
 }

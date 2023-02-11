@@ -2,6 +2,7 @@ $sm: 31.25rem;
 $md: 48rem;
 $lg: 64rem;
 $xl: 78.125rem;
+$aboutMd: 37.5rem;
 
 @mixin smSize {
   @media (min-width: #{$sm}) {
@@ -23,6 +24,12 @@ $xl: 78.125rem;
 
 @mixin xlSize {
   @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin aboutMd {
+  @media(min-width: #{$aboutMd}) {
     @content;
   }
 }

@@ -60,6 +60,8 @@ projectBtn.forEach((btn, i) => {
   })
 })
 
+
+
 modalCloseBtn.forEach((modalCloseBtn) => {
   modalCloseBtn.addEventListener('click', () => {
     modalSection.forEach((modalSection) => {
@@ -71,9 +73,31 @@ modalCloseBtn.forEach((modalCloseBtn) => {
 
 // sticky
 
+let lastScroll = 0;
+
 window.addEventListener('scroll', () => {
   let modalContent = document.querySelectorAll('.modal-content')
 
+  const currentScroll = window.pageYOffset;
+
+  modalContent.forEach((modalContent) => {
+
+    if (currentScroll <= 0) {
+      modalContent.classList.remove('sticky-up')
+    }
+
+    if (currentScroll > lastScroll) {
+      modalContent.classList.remove('sticky-up')
+      modalContent.classList.add('sticky-down')
+    }
+
+    if (currentScroll < lastScroll) {
+      modalContent.classList.remove('sticky-down')
+      modalContent.classList.add('sticky-up')
+    }
+  })
+
+  lastScroll = currentScroll
   modalContent.forEach((modalContent) => {
     modalContent.classList.toggle('sticky', window.scrollY > 200)
   })

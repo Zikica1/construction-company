@@ -11,3 +11,13 @@
     padding-bottom: 6.25em;
   }
 }
+
+.p-y-2 {
+  padding-top: 4.375em;
+  padding-bottom: 4.375em;
+
+  @include lgSize {
+    padding-top: 12.5em;
+    padding-bottom: 12.5em;
+  }
+}

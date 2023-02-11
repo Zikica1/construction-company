@@ -87,6 +87,7 @@
   display: block;
 }
 
+
 .project-inner-all .project-wrap>*:nth-child(1) {
   grid-column: 1 / span 2;
 
@@ -311,11 +312,13 @@
   }
 }
 
-.modal-content.sticky {
+.modal-content.sticky-down {
   @include lgSize {
-    padding-top: 20%;
+    padding-top: 150px;
   }
 }
+
+.modal-content.sticky-up {}
 
 .modal-body-wrap-close {
   position: absolute;

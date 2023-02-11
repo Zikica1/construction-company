@@ -128,7 +128,8 @@
 }
 
 /* Project-btn */
-.project-btn {
+.project-btn,
+.project-btn-2 {
   display: inline-block;
   position: relative;
   background-color: $primary;
@@ -149,7 +150,8 @@
   transition: transform .3s ease-out;
 }
 
-.project-btn:hover .project-btn-overlay {
+.project-btn:hover .project-btn-overlay,
+.project-btn-2:hover .project-btn-overlay {
   transform: translate(-50%, -50%) scale(1);
 }
 
