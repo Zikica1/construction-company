@@ -119,6 +119,10 @@ nav a {
   }
 }
 
+.activeLi nav a::before {
+  background-color: $primary;
+}
+
 nav a:hover {
   opacity: 0.8;
 
