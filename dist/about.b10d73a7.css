@@ -130,13 +130,13 @@ nav {
 }
 
 nav ul li {
-  margin: .4em 2em;
+  margin: 1em 2em;
 }
 
 nav a {
   text-align: center;
   color: #002240;
-  padding: 1.114em 0;
+  padding: .5em 2em;
   font-family: Poppins, sans-serif;
   font-size: 2.1875rem;
   font-weight: 500;
