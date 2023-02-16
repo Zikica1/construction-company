@@ -116,10 +116,6 @@ nav a {
     &:hover::before {
       transform: scale(1, 1);
     }
-
-    nav li.activeLi &::before {
-      background-color: $primary;
-    }
   }
 }
 
